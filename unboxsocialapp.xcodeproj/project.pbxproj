@@ -11,6 +11,7 @@
 		F5782D2525F246B2006C2281 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5782D2425F246B2006C2281 /* ContentView.swift */; };
 		F5782D2725F246B9006C2281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5782D2625F246B9006C2281 /* Assets.xcassets */; };
 		F5782D2A25F246B9006C2281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5782D2925F246B9006C2281 /* Preview Assets.xcassets */; };
+		F5782D3325F31474006C2281 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5782D3225F31473006C2281 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		F5782D2625F246B9006C2281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5782D2925F246B9006C2281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5782D2B25F246B9006C2281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5782D3225F31473006C2281 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				F5782D2225F246B2006C2281 /* unboxsocialappApp.swift */,
 				F5782D2425F246B2006C2281 /* ContentView.swift */,
+				F5782D3225F31473006C2281 /* LoginView.swift */,
 				F5782D2625F246B9006C2281 /* Assets.xcassets */,
 				F5782D2B25F246B9006C2281 /* Info.plist */,
 				F5782D2825F246B9006C2281 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5782D3325F31474006C2281 /* LoginView.swift in Sources */,
 				F5782D2525F246B2006C2281 /* ContentView.swift in Sources */,
 				F5782D2325F246B2006C2281 /* unboxsocialappApp.swift in Sources */,
 			);
