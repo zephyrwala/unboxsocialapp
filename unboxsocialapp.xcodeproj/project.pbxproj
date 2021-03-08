@@ -12,6 +12,7 @@
 		F5782D2725F246B9006C2281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5782D2625F246B9006C2281 /* Assets.xcassets */; };
 		F5782D2A25F246B9006C2281 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5782D2925F246B9006C2281 /* Preview Assets.xcassets */; };
 		F5782D3325F31474006C2281 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5782D3225F31473006C2281 /* LoginView.swift */; };
+		F5C7EE8825F623E200510A08 /* Onboarding1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7EE8725F623E200510A08 /* Onboarding1View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F5782D2925F246B9006C2281 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5782D2B25F246B9006C2281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5782D3225F31473006C2281 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F5C7EE8725F623E200510A08 /* Onboarding1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				F5782D2225F246B2006C2281 /* unboxsocialappApp.swift */,
 				F5782D2425F246B2006C2281 /* ContentView.swift */,
 				F5782D3225F31473006C2281 /* LoginView.swift */,
+				F5C7EE8725F623E200510A08 /* Onboarding1View.swift */,
 				F5782D2625F246B9006C2281 /* Assets.xcassets */,
 				F5782D2B25F246B9006C2281 /* Info.plist */,
 				F5782D2825F246B9006C2281 /* Preview Content */,
@@ -144,6 +147,7 @@
 				F5782D3325F31474006C2281 /* LoginView.swift in Sources */,
 				F5782D2525F246B2006C2281 /* ContentView.swift in Sources */,
 				F5782D2325F246B2006C2281 /* unboxsocialappApp.swift in Sources */,
+				F5C7EE8825F623E200510A08 /* Onboarding1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

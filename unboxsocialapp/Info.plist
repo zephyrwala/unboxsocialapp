@@ -30,7 +30,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>unboxsociallogo</string>
+		<string>ubx</string>
 		<key>UIColorName</key>
 		<string>unbox</string>
 	</dict>
