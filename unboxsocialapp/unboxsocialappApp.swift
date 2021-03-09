@@ -11,7 +11,7 @@ import SwiftUI
 struct unboxsocialappApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Onboarding1View()
         }
     }
 }

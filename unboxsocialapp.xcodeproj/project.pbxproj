@@ -14,6 +14,7 @@
 		F5782D3325F31474006C2281 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5782D3225F31473006C2281 /* LoginView.swift */; };
 		F5C7EE8825F623E200510A08 /* Onboarding1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7EE8725F623E200510A08 /* Onboarding1View.swift */; };
 		F5C7EE8B25F6832100510A08 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7EE8A25F6832100510A08 /* TestView.swift */; };
+		F5C7EE9225F7CB2100510A08 /* test2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C7EE9125F7CB2100510A08 /* test2View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F5782D3225F31473006C2281 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F5C7EE8725F623E200510A08 /* Onboarding1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1View.swift; sourceTree = "<group>"; };
 		F5C7EE8A25F6832100510A08 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		F5C7EE9125F7CB2100510A08 /* test2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F5782D3225F31473006C2281 /* LoginView.swift */,
 				F5C7EE8725F623E200510A08 /* Onboarding1View.swift */,
 				F5C7EE8A25F6832100510A08 /* TestView.swift */,
+				F5C7EE9125F7CB2100510A08 /* test2View.swift */,
 				F5782D2625F246B9006C2281 /* Assets.xcassets */,
 				F5782D2B25F246B9006C2281 /* Info.plist */,
 				F5782D2825F246B9006C2281 /* Preview Content */,
@@ -150,6 +153,7 @@
 				F5782D3325F31474006C2281 /* LoginView.swift in Sources */,
 				F5C7EE8B25F6832100510A08 /* TestView.swift in Sources */,
 				F5782D2525F246B2006C2281 /* ContentView.swift in Sources */,
+				F5C7EE9225F7CB2100510A08 /* test2View.swift in Sources */,
 				F5782D2325F246B2006C2281 /* unboxsocialappApp.swift in Sources */,
 				F5C7EE8825F623E200510A08 /* Onboarding1View.swift in Sources */,
 			);
