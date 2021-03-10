@@ -2,61 +2,114 @@
 import SwiftUI
 
 struct IngredientsPickerView: View {
-        @State var ingredients: [Ingredient] = [Ingredient(name: "Salt", image: "busi"),
-                                                                                        Ingredient(name: "Pepper", image: "lotus"),
-                                                                                        Ingredient(name: "Chindi", image: "piano"),
-                                                                                        Ingredient(name: "hili", image: "foot"),
-                                                                                        Ingredient(name: "Bhili", image: "busi"),
-                                                                                        Ingredient(name: "Phili", image: "foot"),
-                                                                                        Ingredient(name: "Lohili", image: "foot"),
-                                                                                        Ingredient(name: "Cohili", image: "busi"),
-                                                                                        Ingredient(name: "mphili", image: "lotus"),
-                                                                                        Ingredient(name: "Milk", image: "piano")]
+        @State var ingredients: [Ingredient] = [Ingredient(name: "Business", image: "busi"),
+                                                Ingredient(name: "Health", image: "lotus"),
+                                                Ingredient(name: "Art", image: "piano"),
+                                                Ingredient(name: "Sports", image: "foot"),
+                                                Ingredient(name: "Finance", image: "busi"),
+                                                Ingredient(name: "Football", image: "foot"),
+                                                Ingredient(name: "Soccer", image: "foot"),
+//                                                Ingredient(name: "Business", image: "busi"),
+//                                                Ingredient(name: "Fitness", image: "lotus"),
+                                                Ingredient(name: "Music", image: "piano")]
         
         var body: some View{
-            ScrollView(.vertical) {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 0), count: 2), spacing: 10) {
-                            ForEach(0..<ingredients.count){ index in
-                                    HStack {
-                                            Button(action: {
-                                                    ingredients[index].isSelected = ingredients[index].isSelected ? false : true
-                                            }) {
-                                                ZStack {
-                                                    if ingredients[index].isSelected {
-                                                        Color.purple
-                                                            .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                                            .cornerRadius(10)
-                                                    }
-                                                    else {
-                                                        Color.gray
-                                                            .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                                            .cornerRadius(10)
-                                                    }
-                                                        
-                                                    
-                                                    VStack{
-                                                                if ingredients[index].isSelected {
-                                                                    Image(ingredients[index].image)
-                                                                        .resizable()
-                                                                        .aspectRatio(contentMode: .fit)
-                                                                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                                                                .animation(.easeIn)
-                                                                } else {
-                                                                    Image(ingredients[index].image)
-                                                                        .resizable()
-                                                                        .aspectRatio(contentMode: .fit)
-                                                                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                                                        .grayscale(0.9)
-                                                                                .animation(.easeOut)
-                                                                }
-                                                                Text(ingredients[index].name)
-                                                                    .foregroundColor(.white)
-                                                    }
-                                                }
-                                            }.buttonStyle(BorderlessButtonStyle())
-                                    }
+            NavigationView {
+                VStack(spacing: 10) {
+                    
+                    
+                    HStack {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Text("Follow Industries ")
+                                    .font(.system(size: 30, weight: .bold))
+                                
                             }
-                }
+                            Text("Customise your feed 1/3")
+                                .font(.system(size: 15, weight: .light))
+                        } .padding()
+                        Spacer()
+                    }
+                    
+                                    ScrollView(.vertical) {
+                        LazyVGrid(columns: Array(repeating: GridItem(.fixed(230), spacing: -45), count: 2), spacing: 17) {
+                                    ForEach(0..<ingredients.count){ index in
+                                            HStack {
+                                                    Button(action: {
+                                                            ingredients[index].isSelected = ingredients[index].isSelected ? false : true
+                                                    }) {
+                                                        ZStack {
+                                                            if ingredients[index].isSelected {
+                                                                Color("unbox")
+                                                                    .frame(width: 167, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                    .cornerRadius(10)
+                                                                    .shadow(color: .purple, radius: 6, x: 0, y: 3)
+                                                            }
+                                                            else {
+                                                                Color.white
+                                                                    .frame(width: 167, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                    .cornerRadius(10)
+                                                                    .shadow(radius: 2 )
+                                                            }
+                                                                
+                                                            
+                                                            VStack(spacing: 10){
+                                                                        if ingredients[index].isSelected {
+                                                                            Image(ingredients[index].image)
+                                                                                .resizable()
+                                                                                .aspectRatio(contentMode: .fit)
+                                                                                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                                        .animation(.easeIn)
+                                                                        } else {
+                                                                            Image(ingredients[index].image)
+                                                                                .resizable()
+                                                                                .aspectRatio(contentMode: .fit)
+                                                                                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                                .grayscale(0.9)
+                                                                                        .animation(.easeOut)
+                                                                        }
+                                                                if ingredients[index].isSelected {
+                                                                    Text(ingredients[index].name)
+                                                                        .foregroundColor(.white)
+                                                                } else {
+                                                                    Text(ingredients[index].name)
+                                                                        .foregroundColor(.black)
+                                                                }
+                                                                       
+                                                            }
+                                                        }.frame(width: 157, height: 144, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                        
+                                                    }.buttonStyle(BorderlessButtonStyle())
+                                                
+                                                
+                                            }
+                                    }
+                        }
+                                    }
+                    
+                    
+                    HStack {
+                        Text("Skip")
+                            .font(.system(size: 15))
+                        Spacer()
+                        
+                        
+                        NavigationLink(destination: TestView()) {
+                            Text("Next")
+                                .font(.system(size: 15))
+                                .foregroundColor(.purple)
+                                
+                                    }
+                        
+                        
+                        
+                        
+                    }.padding(.horizontal, 39)
+                    .padding(.bottom, 26)
+
+                }.navigationBarTitle("Contact List", displayMode: .inline)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(true)
             }
         }
 }
