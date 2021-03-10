@@ -2,16 +2,16 @@
 import SwiftUI
 
 struct IngredientsPickerView: View {
-        @State var ingredients: [Ingredient] = [Ingredient(name: "Salt"),
-                                                                                        Ingredient(name: "Pepper"),
-                                                                                        Ingredient(name: "Chindi"),
-                                                                                        Ingredient(name: "hili"),
-                                                                                        Ingredient(name: "Bhili"),
-                                                                                        Ingredient(name: "Phili"),
-                                                                                        Ingredient(name: "Lohili"),
-                                                                                        Ingredient(name: "Cohili"),
-                                                                                        Ingredient(name: "mphili"),
-                                                                                        Ingredient(name: "Milk")]
+        @State var ingredients: [Ingredient] = [Ingredient(name: "Salt", image: "busi"),
+                                                                                        Ingredient(name: "Pepper", image: "lotus"),
+                                                                                        Ingredient(name: "Chindi", image: "piano"),
+                                                                                        Ingredient(name: "hili", image: "foot"),
+                                                                                        Ingredient(name: "Bhili", image: "busi"),
+                                                                                        Ingredient(name: "Phili", image: "foot"),
+                                                                                        Ingredient(name: "Lohili", image: "foot"),
+                                                                                        Ingredient(name: "Cohili", image: "busi"),
+                                                                                        Ingredient(name: "mphili", image: "lotus"),
+                                                                                        Ingredient(name: "Milk", image: "piano")]
         
         var body: some View{
             ScrollView(.vertical) {
@@ -34,14 +34,19 @@ struct IngredientsPickerView: View {
                                                     }
                                                         
                                                     
-                                                    HStack{
+                                                    VStack{
                                                                 if ingredients[index].isSelected {
-                                                                        Image(systemName: "checkmark.circle.fill")
-                                                                                .foregroundColor(.white)
+                                                                    Image(ingredients[index].image)
+                                                                        .resizable()
+                                                                        .aspectRatio(contentMode: .fit)
+                                                                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                                                                 .animation(.easeIn)
                                                                 } else {
-                                                                        Image(systemName: "circle")
-                                                                                .foregroundColor(.primary)
+                                                                    Image(ingredients[index].image)
+                                                                        .resizable()
+                                                                        .aspectRatio(contentMode: .fit)
+                                                                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                        .grayscale(0.9)
                                                                                 .animation(.easeOut)
                                                                 }
                                                                 Text(ingredients[index].name)
@@ -58,6 +63,7 @@ struct IngredientsPickerView: View {
 struct Ingredient{
         var id = UUID()
         var name: String
+        var image: String
         var isSelected: Bool = false
 }
 
