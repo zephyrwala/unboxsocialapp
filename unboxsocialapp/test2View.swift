@@ -43,7 +43,7 @@ struct IngredientsPickerView: View {
                                                                 Color("unbox")
                                                                     .frame(width: 177, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                                                     .cornerRadius(10)
-                                                                    .shadow(color: .purple, radius: 6, x: 0, y: 3)
+                                                                    .shadow(color: .gray, radius: 3, x: 0, y: 1)
                                                             }
                                                             else {
                                                                 Color.white

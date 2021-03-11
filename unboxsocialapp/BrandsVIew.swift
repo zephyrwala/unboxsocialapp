@@ -19,6 +19,9 @@ struct BrandsVIew: View {
                                             Brand(name: "KFC", image: "kfc"),
 
                                             Brand(name: "H&M", image: "hnm")]
+
+    
+   
     
     @State var searchText = ""
     
@@ -49,7 +52,10 @@ struct BrandsVIew: View {
                     
                                 ScrollView(.vertical) {
                     LazyVGrid(columns: Array(repeating: GridItem(.fixed(230), spacing: -35), count: 2), spacing: 15) {
-                                ForEach(0..<brands.count){ index in
+                        ForEach(0..<brands.count) { index in
+                            
+//                            { $0.tag.contains("Psychology") }
+                            
                                         HStack {
                                                 Button(action: {
                                                         brands[index].isSelected = brands[index].isSelected ? false : true
@@ -59,7 +65,7 @@ struct BrandsVIew: View {
                                                             Color("unbox")
                                                                 .frame(width: 177, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                                                 .cornerRadius(10)
-                                                                .shadow(color: .purple, radius: 6, x: 0, y: 3)
+                                                                .shadow(color: .gray, radius: 3, x: 0, y: 1)
                                                         }
                                                         else {
                                                             Color.white
@@ -136,6 +142,7 @@ struct Brand{
     var image: String
     var isSelected: Bool = false
 }
+
 
 
 struct BrandsVIew_Previews: PreviewProvider {
