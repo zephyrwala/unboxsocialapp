@@ -32,7 +32,7 @@ struct IngredientsPickerView: View {
                     }
                     
                                     ScrollView(.vertical) {
-                        LazyVGrid(columns: Array(repeating: GridItem(.fixed(230), spacing: -45), count: 2), spacing: 17) {
+                        LazyVGrid(columns: Array(repeating: GridItem(.fixed(230), spacing: -35), count: 2), spacing: 17) {
                                     ForEach(0..<ingredients.count){ index in
                                             HStack {
                                                     Button(action: {
@@ -41,15 +41,15 @@ struct IngredientsPickerView: View {
                                                         ZStack {
                                                             if ingredients[index].isSelected {
                                                                 Color("unbox")
-                                                                    .frame(width: 167, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                    .frame(width: 177, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                                                     .cornerRadius(10)
                                                                     .shadow(color: .purple, radius: 6, x: 0, y: 3)
                                                             }
                                                             else {
                                                                 Color.white
-                                                                    .frame(width: 167, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                                                    .frame(width: 177, height: 142, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                                                     .cornerRadius(10)
-                                                                    .shadow(radius: 2 )
+                                                                    .shadow(color: .gray, radius: 3, x: 0, y: 1)
                                                             }
                                                                 
                                                             
@@ -91,10 +91,11 @@ struct IngredientsPickerView: View {
                     HStack {
                         Text("Skip")
                             .font(.system(size: 15))
+                            
                         Spacer()
                         
                         
-                        NavigationLink(destination: TestView()) {
+                        NavigationLink(destination: BrandsVIew()) {
                             Text("Next")
                                 .font(.system(size: 15))
                                 .foregroundColor(.purple)
@@ -105,11 +106,13 @@ struct IngredientsPickerView: View {
                         
                         
                     }.padding(.horizontal, 39)
-                    .padding(.bottom, 26)
+                    .padding(.bottom, 20)
 
-                }.navigationBarTitle("Contact List", displayMode: .inline)
+                }
+                .navigationBarTitle("", displayMode: .inline)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
             }
         }
 }
